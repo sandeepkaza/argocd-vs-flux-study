@@ -1,12 +1,24 @@
-% NOT web-verified by tooling. The author must open and read every entry
-% before submission (see the pre-submission gate in paper.tex).
+% Web-verified 2026-07-26 against IEEE Xplore / ACM DL / arXiv / dblp.
+% Corrections applied that run:
+%   - nephio2024 -> ghosh2025ibn: the old entry was an explicit PLACEHOLDER
+%     ("representative adjacent study", venue "IEEE/IFIP network automation
+%     venue") — i.e. a fabricated citation. Replaced with the real paper it was
+%     standing in for: Ghosh et al., IEEE CSCN 2025 (arXiv:2509.13901). NOTE:
+%     that paper benchmarks Argo CD, Flux CD and ConfigSync on latency and
+%     resource use, so it is CLOSER to this study than the placeholder implied;
+%     the related-work sentence in paper.tex was rewritten accordingly.
+%   - kubernetes: was @inproceedings with booktitle = CACM. It is a journal
+%     article; retyped @article with volume/number/pages/DOI.
+%   - humble2010cd: was @article with journal = "Addison-Wesley". It is a book;
+%     retyped @book with publisher and ISBN.
+%   - beetz2022gitops: verified, DOI added.
 
 @misc{argocd,
   author       = {{Argo Project / CNCF}},
   title        = {Argo CD: Declarative GitOps Continuous Delivery for Kubernetes (v3.4.5)},
   howpublished = {\url{https://argo-cd.readthedocs.io/}},
   year         = {2026},
-  note         = {Version pinned for this study}
+  note         = {Version pinned for this study; accessed 2026-07-26}
 }
 
 @misc{flux,
@@ -14,14 +26,15 @@
   title        = {Flux: GitOps Toolkit for Kubernetes (v2.9.2)},
   howpublished = {\url{https://fluxcd.io/}},
   year         = {2026},
-  note         = {Version pinned for this study}
+  note         = {Version pinned for this study; accessed 2026-07-26}
 }
 
 @misc{opengitops,
   author       = {{OpenGitOps / CNCF}},
   title        = {OpenGitOps Principles v1.0.0},
   howpublished = {\url{https://opengitops.dev/}},
-  year         = {2023}
+  year         = {2023},
+  note         = {Accessed 2026-07-26}
 }
 
 @article{beetz2022gitops,
@@ -31,48 +44,56 @@
   volume  = {39},
   number  = {4},
   pages   = {70--75},
-  year    = {2022}
+  year    = {2022},
+  doi     = {10.1109/MS.2021.3119106}
 }
 
-@inproceedings{kubernetes,
-  author    = {Burns, Brendan and Grant, Brian and Oppenheimer, David and
-               Brewer, Eric and Wilkes, John},
-  title     = {Borg, Omega, and Kubernetes},
-  booktitle = {Communications of the ACM},
-  volume    = {59},
-  number    = {5},
-  pages     = {50--57},
-  year      = {2016}
+@article{kubernetes,
+  author  = {Burns, Brendan and Grant, Brian and Oppenheimer, David and
+             Brewer, Eric and Wilkes, John},
+  title   = {Borg, Omega, and Kubernetes},
+  journal = {Communications of the ACM},
+  volume  = {59},
+  number  = {5},
+  pages   = {50--57},
+  year    = {2016},
+  doi     = {10.1145/2890784}
 }
 
 @misc{kind,
   author       = {{Kubernetes SIGs}},
   title        = {kind: Kubernetes IN Docker (v1.34 node image)},
   howpublished = {\url{https://kind.sigs.k8s.io/}},
-  year         = {2026}
+  year         = {2026},
+  note         = {Accessed 2026-07-26}
 }
 
 @misc{gitea,
   author       = {{Gitea}},
   title        = {Gitea: A Painless Self-hosted Git Service},
-  howpublished = {\url{https://gitea.io/}},
-  year         = {2026}
+  howpublished = {\url{https://about.gitea.com/}},
+  year         = {2026},
+  note         = {Accessed 2026-07-26}
 }
 
-@article{humble2010cd,
+@book{humble2010cd,
   author    = {Humble, Jez and Farley, David},
   title     = {Continuous Delivery: Reliable Software Releases through Build,
                Test, and Deployment Automation},
-  journal   = {Addison-Wesley},
+  publisher = {Addison-Wesley Professional},
+  series    = {Addison-Wesley Signature Series},
+  isbn      = {978-0321601919},
   year      = {2010}
 }
 
-@inproceedings{nephio2024,
-  author    = {{Nephio / intent-based automation authors}},
-  title     = {Intent-Based Network Automation with GitOps Reconciliation
-               (representative adjacent study)},
-  booktitle = {IEEE/IFIP network automation venue},
-  year      = {2024},
-  note      = {VERIFY exact citation before submission -- placeholder for the
-               nearest adjacent academic GitOps measurement}
+@inproceedings{ghosh2025ibn,
+  author    = {Ghosh, Saptarshi and Mavromatis, Ioannis and
+               Antonakoglou, Konstantinos and Katsaros, Konstantinos},
+  title     = {Performance Evaluation of Intent-Based Networking Scenarios:
+               A GitOps and Nephio Approach},
+  booktitle = {Proc.\ IEEE Conference on Standards for Communications and
+               Networking (CSCN)},
+  year      = {2025},
+  note      = {arXiv:2509.13901},
+  doi       = {10.48550/arXiv.2509.13901}
 }

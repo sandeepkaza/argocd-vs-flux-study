@@ -10,7 +10,7 @@ results_flux_tuned.csv. Runner log: argocd-leg.log, p7-rest.log.
 
 | condition | median | range |
 |---|---|---|
-| Argo CD, defaults (3 min repo poll) | 236.8 s | 180.3–382.7 |
+| Argo CD, defaults (3 min repo poll) | 236.8 s | 180.3–383.3 |
 | Argo CD, tuned (timeout.reconciliation=10s) | 41.6 s | 10.4–177.9* |
 | Flux, 1 m intervals (GitRepository+Kustomization) | 58.5 s | 7.1–61.5 |
 | Flux, tuned (10 s intervals) | 5.6 s | 4.9–10.7 |
